@@ -1,0 +1,8 @@
+schema_version: 1
+name: new_scene_fixed_temperature
+mode: fixed_apparent_temperature
+temperature_min_c: 10.0
+temperature_max_c: 40.0
+dde_gain: 0.0
+polarity: white_hot
+palette: gray

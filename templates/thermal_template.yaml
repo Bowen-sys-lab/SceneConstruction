@@ -1,0 +1,37 @@
+schema_version: 1
+
+defaults:
+  target: background
+  material: concrete
+
+targets:
+  background:
+    mode: fixed
+    temperature_c: 18.0
+
+  target_object:
+    mode: fixed
+    temperature_c: 24.0
+
+  target_hotspot:
+    mode: fixed
+    temperature_c: 65.0
+
+bindings:
+  - name: ground
+    prim_path: /World/Site/Ground
+    include_children: true
+    target: background
+    material: concrete
+
+  - name: target_object
+    prim_path: /World/Site/Target_001
+    include_children: true
+    target: target_object
+    material: car_paint_black
+
+  - name: target_hotspot
+    prim_path: /World/Site/Target_001/Hotspot
+    include_children: true
+    target: target_hotspot
+    material: bare_aluminium

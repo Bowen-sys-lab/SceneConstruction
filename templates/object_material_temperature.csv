@@ -1,0 +1,4 @@
+object_name,prim_path,rgb_material,thermal_material,target_name,temperature_c,notes
+background,/World/Site/Ground,concrete,concrete,background,18.0,
+target_object,/World/Site/Target_001,car_paint_black,car_paint_black,target_object,24.0,
+target_hotspot,/World/Site/Target_001/Hotspot,metal,bare_aluminium,target_hotspot,65.0,

@@ -1,0 +1,12 @@
+schema_version: 17
+scene:
+  name: new_scene_environment
+  description: Estimated environment for research prototyping; review before formal data collection
+  weather_file: ./weather.csv
+  atmosphere_preset: us_standard_clear
+  environment_preset: clear_dry
+  site:
+    latitude_deg: 31.2
+    longitude_deg: 121.5
+    altitude_m: 10.0
+  start_utc: '2026-01-01T12:00:00Z'
