@@ -13,6 +13,10 @@ $launcher = Join-Path $ProjectRoot 'scripts/start_crazyflie_dual_camera_view.py'
 if (-not (Test-Path -LiteralPath $launcher)) { throw "Project preview launcher not found: $launcher" }
 if (-not (Test-Path -LiteralPath $IsaacSimPython)) { throw "Isaac Sim Python launcher not found: $IsaacSimPython" }
 
+$preflight = Join-Path $PSScriptRoot 'preflight_environment.ps1'
+& $preflight -ProjectRoot $ProjectRoot -IsaacRoot (Split-Path -Parent $IsaacSimPython) -SceneConfig $SceneConfig
+if ($LASTEXITCODE -ne 0) { throw 'Environment preflight failed; preview was not started.' }
+
 Write-Host 'Starting RGB + Thermal preview.'
 Write-Host 'The preview window intentionally shows only the two images.'
 
